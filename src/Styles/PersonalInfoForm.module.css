@@ -1,6 +1,6 @@
 label{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 5px; 
     margin-top: 10px;
 }
@@ -13,9 +13,10 @@ input{
 button{
     display: block;
     margin-top: 10px;
-  }
-
-  .outputBox{
-    background-color: aqua;
-    border: solid red 1px;
+}
+#educationalAttainment{
+    background-color: aqua ;
+}
+.test{
+    color: aqua;
 }

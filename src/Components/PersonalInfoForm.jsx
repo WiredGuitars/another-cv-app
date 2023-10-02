@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../Styles/PersonalInfoForm.module.css";
+import "../Styles/PersonalInfoForm.module.css";
 
 export default function PersonalInfoForm({functionToPassDown}) {
   
@@ -9,7 +9,7 @@ export default function PersonalInfoForm({functionToPassDown}) {
     }
 
     return (
-    <form action="/submit" onSubmit={handleClick} method="POST">
+    <form action="/submit" className="test" onSubmit={handleClick} method="POST">
       <label htmlFor="name">Name:</label>
       <input type="text" id="name" name="name" />
       <label htmlFor="phone">Phone:</label>

@@ -1,0 +1,21 @@
+label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px; 
+    margin-top: 10px;
+}
+input{
+    min-width: 100px;
+    max-width: 400px;
+
+}
+
+button{
+    display: block;
+    margin-top: 10px;
+  }
+
+  .outputBox{
+    background-color: aqua;
+    border: solid red 1px;
+}

@@ -4,28 +4,22 @@ import PersonalInfoForm from "./Components/PersonalInfoForm";
 import RenderedInfoForm from "./Components/RenderedInfoForm";
 
 export default function App() {
+  const [myState, setmyState] = useState({ name: "" });
+  const dataToPassDown = myState
+
+  const handleSubmit = (sendUp) => {
+    setmyState(sendUp)
+    console.log(myState)
+    }
   
-  const [myState, setmyState] = useState()
-
-
-  function handleSubmit({data}){
-    console.log(data.name)
-    
-  }
-
-
   return (
     <div className="flex">
-        <div>
-          <PersonalInfoForm functionToPassDown = {handleSubmit} />
-        </div>
-        <div className="marginDiv">
-          <RenderedInfoForm />
-        </div>
-   </div>
-    
+      <div>
+        <PersonalInfoForm functionToPassDown={handleSubmit} />
+      </div>
+      <div className="marginDiv">
+        <RenderedInfoForm obj={dataToPassDown} />
+      </div>
+    </div>
   );
 }
-
-
-

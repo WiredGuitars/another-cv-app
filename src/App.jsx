@@ -5,9 +5,11 @@ import RenderedInfoForm from "./Components/RenderedInfoForm";
 
 export default function App() {
   
-  
-  function handleSubmit(data){
-    console.log(data)
+  const [myState, setmyState] = useState()
+
+
+  function handleSubmit({data}){
+    console.log(data.name)
     
   }
 

@@ -3,13 +3,21 @@ import "../Styles/PersonalInfoForm.module.css";
 
 export default function PersonalInfoForm({functionToPassDown}) {
   
-    const handleClick = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        functionToPassDown("John") 
+        
+        const formData = new FormData(event.target);
+
+
+        const sendUp = {
+          name: formData.get("name")
+        }
+        
+        functionToPassDown(sendUp) 
     }
 
     return (
-    <form action="/submit" className="test" onSubmit={handleClick} method="POST">
+    <form action="/submit"  onSubmit={handleSubmit} method="POST">
       <label htmlFor="name">Name:</label>
       <input type="text" id="name" name="name" />
       <label htmlFor="phone">Phone:</label>

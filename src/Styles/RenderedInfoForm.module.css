@@ -1,5 +1,7 @@
 .outputBox{
-    background: aqua;
+    background: white;
     border: solid red 1px;
     font-size: 65px;
+    height: 300px;
+    width: 300px;
 }

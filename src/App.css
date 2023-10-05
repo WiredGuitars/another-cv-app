@@ -1,10 +1,15 @@
-.flex{
+.flex {
   display: flex;
   flex-direction: row;
+  justify-content: center; 
+  gap: 20px;
 }
-.marginDiv{
-  margin-left: 400px;
+
+.renderedInfo {
+  padding: 20px; 
 }
-body{
+
+body {
   background-color: grey;
+  overflow-x: hidden; 
 }

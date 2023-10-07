@@ -17,6 +17,21 @@ export default function PersonalInfoForm({
     functionToPassDown(formData);
   };
 
+  const clearFormData = (event) => {
+    event.preventDefault();
+    setFormData(emptyFormData);
+  };
+
+  const emptyFormData = {
+    name: "",
+    phone: "",
+    email: "",
+    educationalAttainment: "highschool",
+    collegeMajor: "",
+    date: "",
+    institution: "",
+    addSkills: "",
+  };
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
@@ -97,6 +112,9 @@ export default function PersonalInfoForm({
         rows="15"
       ></textarea>
       <button type="submit">Submit</button>
+      <button type="reset" onClick={clearFormData}>
+        Clear
+      </button>
     </form>
   );
 }
